@@ -1,0 +1,51 @@
+{
+  "name": "pos-client",
+  "version": "0.1.0",
+  "description": "Aplicacion de Punto de Venta (Electron + React)",
+  "main": "src/main/main.js",
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "build": "vite build && electron-builder",
+    "start": "electron .",
+    "test": "echo 'Tests pendientes'"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sql.js": "^1.10.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "vite": "^5.0.11",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.pos.supermercado",
+    "productName": "POS Supermercado",
+    "electronVersion": "28.1.0",
+    "asar": false,
+    "directories": {
+      "output": "dist-build",
+      "buildResources": "public"
+    },
+    "files": [
+      "dist/**/*",
+      "src/main/**/*",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "public/icon.ico"
+    }
+  }
+}

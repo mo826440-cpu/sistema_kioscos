@@ -1,0 +1,96 @@
+# =====================================================
+# .gitignore - Archivos que Git debe ignorar
+# =====================================================
+#
+# ¿Qué hace este archivo?
+# Le dice a Git qué archivos NO debe guardar en el repositorio
+# Esto es importante para no subir cosas como contraseñas,
+# archivos temporales, o dependencias que se pueden reinstalar.
+#
+# =====================================================
+
+# ===== Node.js =====
+node_modules/              # Dependencias npm (se reinstalan con npm install)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ===== Base de Datos =====
+*.db                       # Archivos SQLite
+*.sqlite
+*.sqlite3
+database/*.db
+pos-client/src/database/*.db
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== Archivos de Sistema =====
+.DS_Store                  # Mac
+Thumbs.db                  # Windows
+desktop.ini                # Windows
+
+# ===== IDEs y Editores =====
+.vscode/                   # Visual Studio Code (configuración personal)
+.idea/                     # JetBrains (WebStorm, etc.)
+*.swp                      # Vim
+*.swo
+*~
+
+# ===== Build y Distribución =====
+dist/                      # Código compilado
+build/
+out/
+*.exe                      # Instaladores de Electron
+*.dmg
+*.AppImage
+
+# ===== Variables de Entorno =====
+.env                       # Configuración sensible (API keys, contraseñas)
+.env.local
+.env.production
+
+# ===== Testing =====
+coverage/                  # Reportes de cobertura de tests
+.nyc_output/
+
+# ===== Temporales =====
+tmp/
+temp/
+*.tmp
+
+# ===== Backups =====
+*.backup
+*.bak
+backup/
+
+# ===== Configuración personal =====
+config.local.json
+settings.local.json
+
+# ===== Electron =====
+.electron/
+electron-builder.yml      # Si tiene datos sensibles
+
+# ===== Sistema POS Específico =====
+# Archivos de tickets impresos
+tickets/
+receipts/
+
+# Caché de sincronización
+sync-cache/
+
+# Datos de prueba locales
+test-data/
+
+# ===== Documentación Generada =====
+docs/api-generated/
+
+# ===== Otros =====
+.cache/
+*.pid
+
+node_modules

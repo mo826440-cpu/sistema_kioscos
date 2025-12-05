@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "description": "API REST para sistema POS (Node.js + Express)",
+  "main": "src/index.js",
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'API Server - En desarrollo (Fase 4)' && echo 'Por ahora este comando no hace nada, lo configuraremos en la Fase 4'",
+    "start": "echo 'Start pendiente - Fase 4'",
+    "build": "echo 'Build pendiente - Fase 4'",
+    "test": "echo 'Tests pendientes'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "nodejs",
+    "pos"
+  ],
+  "comment": "Las dependencias se instalaran en la Fase 4 cuando empecemos a programar el servidor"
+}
+

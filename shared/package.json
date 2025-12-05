@@ -1,0 +1,22 @@
+{
+  "name": "shared",
+  "version": "0.1.0",
+  "description": "Codigo compartido entre POS Client y API",
+  "main": "index.js",
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "echo 'Tests pendientes'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "shared",
+    "types",
+    "validators",
+    "utils"
+  ],
+  "comment": "Esta carpeta contiene codigo compartido (tipos, validadores, constantes) que usan tanto el cliente como el servidor"
+}
+

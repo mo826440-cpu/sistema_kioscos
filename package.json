@@ -1,0 +1,43 @@
+{
+  "name": "sistema-pos-supermercado",
+  "version": "0.1.0",
+  "description": "Sistema completo de Punto de Venta (POS) para supermercado con sincronizacion offline, hardware y backoffice",
+  "main": "index.js",
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "pos-client",
+    "api",
+    "shared"
+  ],
+  "scripts": {
+    "info": "echo '================================================' && echo '   SISTEMA POS - SUPERMERCADO' && echo '================================================' && echo '' && echo 'Comandos disponibles:' && echo '' && echo '  npm run dev:pos      - Iniciar aplicacion POS (Electron)' && echo '  npm run dev:api      - Iniciar servidor API' && echo '  npm run dev:all      - Iniciar todo (POS + API)' && echo '  npm run build:pos    - Compilar aplicacion POS' && echo '  npm run build:api    - Compilar API' && echo '  npm run install:all  - Instalar dependencias en todos los modulos' && echo '' && echo '================================================'",
+    "install:all": "npm install && cd pos-client && npm install && cd ../api && npm install && cd ../shared && npm install && cd ..",
+    "dev:pos": "cd pos-client && npm run dev",
+    "dev:api": "cd api && npm run dev",
+    "dev:all": "concurrently \"npm run dev:api\" \"npm run dev:pos\"",
+    "build:pos": "cd pos-client && npm run build",
+    "build:api": "cd api && npm run build",
+    "build:all": "npm run build:api && npm run build:pos",
+    "test": "echo 'Tests pendientes' && exit 0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "keywords": [
+    "pos",
+    "punto-de-venta",
+    "supermercado",
+    "electron",
+    "react",
+    "nodejs",
+    "sqlite",
+    "offline-first"
+  ]
+}
+

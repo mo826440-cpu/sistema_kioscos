@@ -1,0 +1,15 @@
+directories:
+  output: dist-build
+  buildResources: public
+appId: com.pos.supermercado
+productName: POS Supermercado
+electronVersion: 28.1.0
+files:
+  - filter:
+      - dist/**/*
+      - src/main/**/*
+      - package.json
+      - node_modules/**/*
+win:
+  target: portable
+  icon: public/icon.ico
