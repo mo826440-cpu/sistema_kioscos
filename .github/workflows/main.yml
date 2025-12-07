@@ -1,0 +1,24 @@
+name: Hola Mundo Action
+
+on:
+  push:
+    branches: [ main, principal ]
+  pull_request:
+    branches: [ main, principal ]
+
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+      
+    - name: Saludar al culiau
+      run: echo "¡Hola culiau! Tu código se subió correctamente 🔥"
+      
+    - name: Mostrar fecha y hora
+      run: date
+      
+    - name: Listar archivos del repo
+      run: ls -la
